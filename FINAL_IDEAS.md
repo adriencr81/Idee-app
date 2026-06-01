@@ -220,6 +220,85 @@
 
 ---
 
+## 3️⃣ CORTISOL COACH — 3 VARIANTES (7.8-8.2/10) ⭐ **NOUVELLE IDÉE**
+
+**Découverte :** Tendance très chaude (#cortisoldetox 800M+ vues, #cortisolbelly 1B+ vues TikTok)  
+**Opportunité :** Digesti existe (petit joueur, mixed reviews) mais gaps éducation = 3 angles différents
+
+### Variante 1 : SLEEP OPTIMIZER — 8.2/10 ⭐ **LA PLUS SÛRE**
+
+**Pitch :** "Sleep Coach : Optimise ton sommeil, baisse naturellement ton cortisol"
+
+**Avantages :**
+- ✅ Zéro allégation perte de poids (side effect)
+- ✅ TAM énorme (50M+ Français mauvais sommeil)
+- ✅ Willingness to pay (€10/mois)
+- ✅ Risque régulateur = BAS
+
+**Features :** Suivi sommeil + éducation cortisol + routine du soir + smartwatch + progression
+
+**Concurrence :** RISE (€20/mo) existe mais ignore lien cortisol = **GAP**
+
+**Monétisation :** Gratuit + Premium (€9,99/mois) + Pro (€19,99/mois)
+
+---
+
+### Variante 2 : ANXIETY RELIEF — 7.8/10 ⭐ **LA PLUS PROTÉGÉE**
+
+**Pitch :** "Calm : Gère ton anxiété en comprenant ton cortisol"
+
+**Avantages :**
+- ✅ Santé mentale = prioritaire (Grande Cause 2026)
+- ✅ Willingness to pay ÉNORME (€11/mois)
+- ✅ Risque régulateur = TRÈS BAS (gouvernement encourage)
+- ✅ TAM = 3-5M Français anxieux
+
+**Features :** Check anxiété + éducation cortisol + respiration + identifier déclencheurs + méditation
+
+**Concurrence :** Rooted (crise), Wysa (généraliste) = **GAP = Comprendre pourquoi anxieux**
+
+**Monétisation :** Gratuit + Premium (€10,99/mois) + Affilié thérapeutes
+
+---
+
+### Variante 3 : ATHLETE RECOVERY — 8.0/10 ⭐ **LA PLUS LUCRATIVE**
+
+**Pitch :** "Cortisol Trainer : Optimise ta récupération athlétique"
+
+**Avantages :**
+- ✅ Athlètes payent CHER (€30+/mois)
+- ✅ HIGH LTV (sticky, engaged)
+- ✅ Risque régulateur = QUASI-NUL (performance = libre)
+- ✅ TAM niche mais premium (500k+ sérieux)
+
+**Features :** Suivi cortisol + alerte surtraining + HRV/fréquence cardiaque + nutrition timing + coach IA
+
+**Concurrence :** WHOOP, Strava, RISE existent mais ZÉRO cortisol + récupération = **MEGA GAP**
+
+**Monétisation :** Gratuit + Premium (€19,99/mois) + Pro (€29,99/mois)
+
+**Cible :** Coureurs, cyclistes, crossfitteurs, athlètes 5-6x/semaine
+
+---
+
+### 📊 COMPARAISON RAPIDE
+
+| Aspect | Sleep | Anxiety | Athlete |
+|---|---|---|---|
+| Score | 8.2 | 7.8 | 8.0 |
+| Risque légal | Bas | Très bas | Quasi-nul |
+| TAM | 50M | 3-5M | 500k |
+| Prix | €9,99/mo | €10,99/mo | €19,99/mo |
+| Cible | Tout le monde | Anxieux | Athlètes |
+
+### 💡 Stratégie Recommandée
+
+1. **Phase 1 :** ANXIETY RELIEF (risque zéro, valide marché)
+2. **Phase 2 :** SLEEP OPTIMIZER (réutilise code, double TAM)
+3. **Phase 3 :** ATHLETE RECOVERY (si Phase 1-2 marche, premium)
+
+---
+
 ## 📞 VALIDATION FEEDBACK LOOP
 
 After MVP launch (4-6 weeks):
