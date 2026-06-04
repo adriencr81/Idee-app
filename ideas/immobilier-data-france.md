@@ -307,3 +307,178 @@ Un même produit peut couvrir #1 + #3 :
 ---
 
 *Recherche effectuée le 04/06/2026 via deep research multi-sources (CEREMA, ADEME, FNAIM, data.gouv.fr, ANIL, communautés proptech)*
+
+---
+
+---
+
+# Open Data France — 10 Idées Micro-SaaS B2B
+
+**Recherche effectuée :** 04 juin 2026
+**Statut :** Analyse approfondie avec vérification adversariale — verdicts documentés
+**Marché :** France B2B / micro-entrepreneurs / artisans / secteurs de niche
+**Catégorie :** Boring SaaS · Data-as-a-Service · Open Data
+**Contrainte :** Rythme d'1h/jour — architecture légère, API publiques, email-first
+
+---
+
+## Tableau de synthèse rapide
+
+| # | Idée | Score | Verdict |
+|---|---|---|---|
+| 8 | Géorisques pour courtiers assurance | **8.5/10** | **GO** ⭐ |
+| 9 | Planificateur bornes recharge IRVE | **8/10** | **GO** ⭐ |
+| 6 | Alertes marchés publics artisans | **7.5/10** | **GO** |
+| 1 | Radar BODACC cessions fonds de commerce | **7/10** | **GO si hyper-vertical** |
+| 3 | Optimiseur tournées foodtruck | **6.5/10** | **WAIT** |
+| 10 | Agrégateur allergènes cantines EGalim | **6.5/10** | **WAIT** |
+| 2 | Leads PMR accessibilité BTP | **6/10** | **WAIT** |
+| 7 | Score d'implantation commerces | **5.5/10** | **WAIT** |
+| 5 | Détecteur opportunités solaire | **4.5/10** | **SKIP** |
+| 4 | Moniteur subventions associations | **2.5/10** | **SKIP** |
+
+---
+
+## Idée 8 — Traqueur Géorisques pour Courtiers Assurance · **8.5/10** · GO ⭐
+
+### Le problème
+Les ~25 000 courtiers indépendants en France passent 5–15 min par dossier sur georisques.gouv.fr, un site conçu pour le grand public. Les logiciels de back-office assurance (Youdge, Assurly, Souscri) gèrent la souscription mais n'intègrent pas le scoring environnemental à l'adresse. Le secteur tourne sur des outils vieillissants.
+
+### Les données
+L'API Géorisques est la mieux notée du benchmark : gratuite, Swagger UI, **1 000 req/min**, couverture nationale (inondations, argiles, cavités, ICPE, radon, avalanches…). Seul bémol : les communes sans PPR approuvé apparaissent "sans risque" alors qu'elles sont "non encore étudiées" — à signaler dans l'interface.
+
+### La faisabilité 1h/jour
+MVP résumé : adresse → API Géorisques → PDF "Score de Risque" aux couleurs du courtier. Un weekend de développement. Modèle de revenus immédiat à **€29–€79/mois** ou **€1–€3 par rapport**.
+
+### Concurrence
+Aucun SaaS moderne identifié pour les courtiers indépendants. Les vieux back-offices ne se sont pas modernisés. Distribution via PLANETE CSCA ou CSCA (syndicats de courtiers) = des milliers de clients instantanément.
+
+---
+
+## Idée 9 — Planificateur Bornes Recharge IRVE · **8/10** · GO ⭐
+
+### Le problème
+154 000 points de charge en France fin 2024 (+31 % en un an), objectif gouvernemental 7 millions d'ici 2030. Hôtels, supermarchés, restaurants, copropriétés se posent tous la question "est-ce rentable chez moi ?". MyTraffic EV Connect est le seul outil crédible — à **€750/mois minimum**, enterprise-only. EVpin (US) ne couvre pas la France.
+
+### Les données
+Fichier IRVE sur `transport.data.gouv.fr` — quotidien, libre, bien documenté (3,8 % d'erreurs, acceptable). Immatriculations VE par commune (Ministère Transition Écologique) disponibles annuellement.
+
+### La faisabilité 1h/jour
+Algorithme central : pour une adresse, compter les bornes IRVE dans un rayon de 1/5/10 km, croiser avec le stock VE immatriculés, calculer un ratio "bornes pour N véhicules". Stack : PostgreSQL + PostGIS + Next.js.
+
+### L'angle de distribution
+Cibler les **électriciens certifiés IRVE** (~30 000 professionnels en France) qui conseillent leurs clients sur l'installation : ils ont besoin d'un outil de ROI à présenter. Prix : **€29–€49/mois**.
+
+---
+
+## Idée 6 — Alertes Marchés Publics Simplifiées pour Artisans · **7.5/10** · GO
+
+### Le problème
+414 000 artisans BTP en France, tous éligibles aux marchés publics locaux. Vecteur Plus facture **€209/mois** — hors de portée d'un micro-entrepreneur. BOAMP.fr est gratuit mais en langue administrative, sans simplification, et ne couvre pas les petits marchés.
+
+### La nuance critique des données
+L'API DECP (data.economie.gouv.fr) couvre les marchés **> €40 000 HT** proprement. Les contrats entre €5 000 et €40 000 sont sur les profils d'acheteurs décentralisés — des centaines de plateformes (scraping complexe).
+
+**MVP recommandé :** se concentrer d'abord sur les marchés > €40K via DECP, filtre géo (département) + secteur (codes CPV BTP), email hebdomadaire en langage simplifié. Prix : **€19/mois**. La différence avec BOAMP.fr gratuit = lisibilité et résumé en 3 lignes.
+
+### Concurrence
+BOAMP.fr (gratuit, basique > €40K), Vecteur Plus (€209/mois, trop cher), E-marchespublics.com (a une page artisans mais sans confirmation sub-€40K). Gap clair sur la tranche €15–€49/mois avec UX simplifiée.
+
+---
+
+## Idée 1 — Radar BODACC Cessions Fonds de Commerce · **7/10** · GO si hyper-vertical
+
+### Le concurrent public à ne pas ignorer
+`bodacc.fr` propose déjà un **service d'alertes email gratuit** (10 recherches sauvegardées par compte). Un outil générique ne survit pas face à ça.
+
+### Le bon positionnement
+La valeur ajoutée doit être radicalement différente : monitorer **toutes** les cessions d'un secteur géographique + NAF (ex : tous les restaurants/bars d'Île-de-France), enrichissement SIRENE automatique (SIRET, téléphone, raison sociale nouvelle société), export CSV/CRM. Cible : **courtiers en cession de fonds de commerce**, réseaux franchise, directions développement enseigne. Abonnement **€49–€99/mois par département**.
+
+### Les données
+API BODACC (OpenDataSoft v2.1) : gratuite, quotidienne, excellente qualité, bien documentée. Exclusion Alsace-Moselle à documenter. bodacc.io propose déjà une API enrichie — la valeur ajoutée doit être le packaging commercial-ready, pas la donnée brute.
+
+---
+
+## Idée 3 — Optimiseur Tournées Foodtruck · **6.5/10** · WAIT
+
+### Le gap est réel
+Aucun outil d'intelligence de localisation pour les food trucks en France. Les concurrents (AirKitchen, Connectill) sont des POS/caisse. Marché en croissance (+30 % 2022–2024, ~700–3 500 trucks actifs).
+
+### Pourquoi attendre
+Les données de fréquentation des marchés sont fragmentées (autorisations mairie = décentralisées, pas de base nationale). La distribution est difficile : les gérants de food truck sont hyper-price-sensitifs, sans budget logiciel structuré.
+
+**Si tu avances :** MVP freemium — liste hebdo des événements par région (gratuit), puis route optimizer **€9/mois**. Distribution via groupes Facebook food truck et AFTR.
+
+---
+
+## Idée 10 — Agrégateur Allergènes / Cantines EGalim · **6.5/10** · WAIT
+
+### Le marché en haut est saturé
+Datameal (25 ans, 30 employés), Easilys (racheté par Mapal OS), Salamandre, VICI AidoMenu couvrent les grandes cantines. `ma-cantine.agriculture.gouv.fr` (gratuit, open source beta.gouv) gère la déclaration de conformité EGalim — la partie obligatoire est déjà couverte gratuitement.
+
+### Le créneau potentiel
+Petites cantines de crèches, écoles associatives, traiteurs artisanaux (< 100 repas/jour) : pas les moyens d'un Datameal, bricolent avec Excel. Outil à **€29–€49/mois** avec saisie ingrédients → allergènes auto (Open Food Facts API) + export conforme EGalim.
+
+### Le frein technique
+Open Food Facts couvre bien les produits industriels mais les ingrédients frais (viande, légumes en vrac) ont une couverture partielle — lacunes dans les calculs d'allergènes, ce qui crée un risque légal réel pour le client.
+
+---
+
+## Idée 2 — Leads PMR Accessibilité pour Artisans BTP · **6/10** · WAIT
+
+### Le gap concurrentiel est le plus flagrant
+**Zéro concurrent direct identifié.** Handibat (label BTP) et Handinorme (advisory ERP owners) sont adjacents. 32 % des ERP non-conformes post-septembre 2024, amendes jusqu'à €45 000.
+
+### Le point bloquant non résolu
+La description suppose que le registre national ERP sur `data.gouv.fr` **indique le statut de conformité PMR par établissement**. Cette hypothèse n'a pas pu être confirmée ou infirmée par la recherche.
+
+**Action avant tout build :** 30 minutes sur `data.gouv.fr` à chercher "ERP accessibilité conformité PMR" pour vérifier si le champ conformité existe et est renseigné à l'échelle nationale. Si oui → **GO immédiat**, le gap concurrentiel est trop large pour ignorer.
+
+---
+
+## Idée 7 — Score d'Implantation Commerces · **5.5/10** · WAIT
+
+### La concurrence existe
+Smappen (**€79–€199/mois**) et Isocarto (**€99–€199/mois**) sont deux concurrents réels avec des features comparables. La différenciation "Sirene-natif à €29/mois" est possible mais le positionnement est à construire.
+
+### Le problème Filosofi est structurellement bloquant
+La promesse "revenus médians par quartier (IRIS)" repose sur Filosofi. Or : **le vintage 2022 n'existe pas** (suppression de la taxe d'habitation a détruit la source géo-localisée), et Filosofi 2 (nouveau système) publie ses premières données 2023 en 2025–2026 avec une rupture de série méthodologique. Les données utilisables datent de **2021** — soit 5 ans d'écart en 2026.
+
+**Recommandation :** attendre Filosofi 2 (vintage 2023) pour la couche revenus. En attendant, une v0 basée uniquement sur la densité concurrentielle SIRENE est honnête commercialement mais moins différenciante.
+
+---
+
+## Idée 5 — Détecteur Opportunités Solaire via BD TOPO · **4.5/10** · SKIP
+
+### La concurrence spécialisée est déjà là
+Cadastre-Solaire.fr (Cythelia Energy) couvre toute la France avec un module Prospection B2B sur les mêmes données IGN. Planno.io a levé en janvier 2026 pour exactement ce use case. Inicio a levé **€1,5M** pour la variante terrain agricole.
+
+### La donnée est plus complexe que présentée
+BD TOPO donne la hauteur des bâtiments (fiable en zone urbaine) mais l'orientation précise de la toiture (azimut, pente) pour le calcul solaire requiert le **LiDAR HD de l'IGN** — plusieurs centaines de Go par région, dataset séparé. La jointure BD TOPO + LiDAR + SIRENE sur une infrastructure solo est un chantier de data engineering incompatible avec 1h/jour.
+
+---
+
+## Idée 4 — Moniteur Subventions pour Associations · **2.5/10** · SKIP
+
+### Deux kill factors cumulés
+
+**Kill 1 — Donnée clé inaccessible :** L'API Data.Subvention est **légalement réservée aux seuls agents publics** (État, collectivités, opérateurs). Un développeur privé ne peut pas y accéder. La promesse "matching RNA + Data Subventions" est techniquement impossible en tant que produit commercial.
+
+**Kill 2 — Concurrence gouvernementale et B2B établie :** Aides-territoires (beta.gouv, gratuit), Le Compte Asso (gratuit, 18 schémas), Finance Active Optim (**20 employés**, 17 000 schémas mis à jour quotidiennement). Il est impossible d'out-data une équipe éditoriale de 20 personnes ni de compétir avec des outils gouvernementaux gratuits sur le même cas d'usage.
+
+---
+
+## Trois enseignements transversaux
+
+### 1. Le modèle Pappers est la référence
+Pappers (données SIRENE/INPI/BODACC) : 3 M d'utilisateurs, **€492K de bénéfice net 2024**, zéro investisseur externe, ~100 clients B2B API (AXA, Crédit Agricole, EDF). La formule : données publiques + UX radicalement meilleure que le site gouvernemental + 99 % gratuit + 1 % B2B qui finance tout. Réplicable sur n'importe quel domaine avec des datasets riches.
+
+### 2. La fourchette de prix validée pour les artisans et micro-entrepreneurs
+Le marché converge sur **€9–€50/mois** avec un sweet spot à **€15–€29/mois**. Au-delà de €50/mois, le ROI doit être justifiable explicitement. Référence : 1,59 M de micro-entrepreneurs économiquement actifs en France (49,8 % des 3,18 M inscrits déclarent un CA positif).
+
+### 3. Les alertes gratuites gouvernementales = le concurrent n°1
+Avant de construire quoi que ce soit sur une API publique, vérifier si le gouvernement propose déjà une version gratuite basique du même service (BODACC.fr → alertes gratuites, BOAMP.fr → alertes gratuites, Ma Cantine → déclaration EGalim gratuite). La valeur ajoutée commerciale doit être sur l'enrichissement, la simplification et l'intégration B2B — pas sur l'accès à la donnée brute.
+
+---
+
+*Recherche effectuée le 04/06/2026 via deep research multi-sources adversariale (5 agents parallèles : concurrents, qualité APIs, marché SaaS France, cas d'usage documentés)*
