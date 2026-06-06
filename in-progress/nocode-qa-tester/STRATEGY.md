@@ -232,3 +232,25 @@ Standards d'entreprise : tests unitaires, typage strict, CI/CD de base sur GitHu
 
 **Règle 2 — Parle business et risques (pour le produit et le salaire)**
 Dans les posts LinkedIn, ne pas parler que de code. Parler de **ROI** (argent économisé en évitant les hallucinations) et de **risques juridiques/réputation** (amende RGPD, bad buzz si l'IA insulte un client). C'est ce langage qui attire les DSI, RSSI, et recruteurs avec du budget.
+
+---
+
+## Analyse critique du framing
+
+### Ce qui est solide
+
+- Le raisonnement par optionnalité est réel. Le scénario B (vitrine GitHub) a une valeur concrète indépendante du SaaS, surtout sur le segment cyber/LLM qui est sous-peuplé de profils crédibles.
+- La règle 2 est la plus précieuse. La majorité des ingénieurs sabotent leur visibilité en parlant de stack au lieu de parler d'argent et de risques. C'est ce qui sépare un profil à 60k d'un profil à 90k.
+
+### Ce qui est légèrement oversell
+
+- **"Zéro risque"** — le temps reste un coût réel. Une heure par jour pendant 8 semaines = 56 heures. Pas énorme, mais honnête de le reconnaître.
+- **"Prix d'or"** — vrai sur le marché US/UK, plus nuancé en France. Les grands comptes paient bien mais le cycle de recrutement est long. Les scale-ups GenAI françaises paient mieux et recrutent plus vite.
+
+### Ce qui manque dans le framing
+
+La règle 1 (clean code) est nécessaire mais pas suffisante pour la vitrine. Ce qui impressionne vraiment un CTO : un **README technique honnête** — *"voilà ce que j'ai choisi, voilà pourquoi, voilà ce que je ferais différemment si c'était en prod à 10k users"*. Ce niveau de recul est rare et distingue un senior d'un mid.
+
+### Choix de techno recommandé
+
+**Python.** L'écosystème LLM (Anthropic SDK, génération PDF, outillage cyber) est plus mature côté Python, et c'est le langage que les recruteurs cyber/IA cherchent en priorité.
