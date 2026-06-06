@@ -1,8 +1,74 @@
 # 🎯 IDÉES FINALES VALIDÉES — JUIN 2026
 
 **Status:** ✅ Prêt pour MVP build  
-**Confidence:** 🟢 HIGH (40 idées validées, 2 idées retenues après deep validation)  
+**Confidence:** 🟢 HIGH (40+ idées validées, sélection affinée après analyse TrustMRR)  
 **Timeline:** 20 days build (each)
+
+---
+
+## 🆕 NOUVELLE PRIORITÉ — AI CV Builder FR — 8,2/10 ⭐ **SPEED-TO-REVENUE #1**
+
+> **Source :** Analyse TrustMRR × Pain points France (Juin 2026)  
+> **Inspiré de :** Rezi ($273K/mois, +15% MoM)  
+> **Voir analyse complète :** `validation-results/TRUSTMRR_SAAS_IDEAS_VALIDATION.md`
+
+### Elevator Pitch
+**"Le seul CV builder IA pensé pour les codes RH français — ATS locaux, lettre de motivation à la française, en euros."**
+
+### Pourquoi c'est la priorité absolue pour générer du cash rapidement
+
+- ✅ **Marché prouvé** : Rezi fait $273K/mois — la demande existe
+- ✅ **Gap FR réel** : Rezi optimisé pour ATS américains, CVcrea.fr en déclin, personne sur les codes RH FR
+- ✅ **MVP ultra-simple** : landing page + prompt Claude verrouillé + 3 templates = 2 semaines
+- ✅ **Monétisation J1** : paiement one-shot €19 pour télécharger = premier euro en 2 semaines
+- ✅ **Single-sided market** : un seul côté (le candidat), pas de problème chicken-and-egg
+
+### Pain Points France (vérifiés)
+
+- Codes CV FR ignorés par les outils US (photo selon secteur, dates inversées, lettre de motivation formelle)
+- ATS européens (CEGID, Workday FR, SAP) = critères différents des outils US
+- CVcrea.fr : 135K visites/mois mais **tendance à la baisse** → marché qui cherche mieux
+- Rezi : support inexistant, crédits IA épuisés, plaintes remboursements premium
+
+### Features MVP (2-3 semaines)
+
+1. Import LinkedIn / upload CV existant
+2. Templates FR par secteur (Tech, Finance, Marketing, Santé)
+3. IA réécriture + score ATS simulé
+4. Lettre de motivation à la française (IA)
+5. Export PDF propre
+
+### Pricing
+
+- **Gratuit** : 1 CV, template de base, export avec filigrane
+- **One-shot** : €19 — déblocage export propre, templates premium
+- **Premium** : €9/mois — illimité, score ATS, LM illimitée
+- **Objectif 6 mois** : 200 abonnés = €1 800 MRR
+
+### Stack
+
+- Next.js + Tailwind + Claude API + Stripe + Supabase + React-PDF
+
+### Scoring
+
+| Dimension | Score |
+|-----------|-------|
+| Douleur réelle | 8/10 |
+| Taille de la demande | 9/10 |
+| Timing | 8/10 |
+| Concurrence | 7/10 |
+| Défendabilité | 8/10 |
+| Gap géographique | 9/10 |
+| **TOTAL** | **8,2/10** ✅ |
+
+### Prochaines étapes
+
+- [ ] Landing page + waitlist (J1-J3)
+- [ ] 10 entretiens candidats (forums emploi FR, r/emploi, LinkedIn)
+- [ ] MVP : 3 templates + export PDF + Stripe (J4-J14)
+- [ ] Premiers clients payants (J15-J21)
+
+---
 
 ---
 
