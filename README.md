@@ -149,6 +149,23 @@ app-playbook/
 
 ---
 
+## 🔥 Opportunités Émergentes à Explorer
+
+### AI Cost FinOps (Juin 2026)
+
+**Marché naissant :** Observabilité des coûts IA et dashboards de suivi des dépenses LLM.
+
+**Lire :** [`ideas/ai_cost_finops_opportunities.md`](ideas/ai_cost_finops_opportunities.md)
+
+**3 opportunités validées :**
+1. **Cost Guard** — Agent local avec alertes temps réel (MVP 7 jours)
+2. **FinOps multi-agent** — Dashboard unifié (Claude Code + Cursor + Copilot)
+3. **Analytics pour agences IA** — Rapports PDF automatiques par client
+
+**Recommandation :** Positionner en "CrowdStrike pour les dépenses IA" (sécurité + coûts).
+
+---
+
 ## 💡 Points Clés
 
 | Phase | Timing | Focus | Success Signal |
